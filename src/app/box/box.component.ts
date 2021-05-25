@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-box',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoxComponent implements OnInit {
 theme="blackbox"
+@Input() title:any;
+@Input('item') things:any; 
+@Output('listen') send:EventEmitter<string>=new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,4 +21,7 @@ theme="blackbox"
     this.theme= this.theme=="blackbox"? "box" : "blackbox";
   }
 
+  clicked(x:string){
+    this.send.emit(x);
+  }
 }

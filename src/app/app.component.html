@@ -2,14 +2,15 @@
   Background Color <input type="color" [(ngModel)]="bgcolor"> <br>
   Font Color <input type="color" [(ngModel)]="fcolor"> <br>
 <h1> {{title}} </h1>
+<h3 [style.color]="'red'">{{message}}</h3>
 <hr>
 <h3>Programmers</h3>
 <ul class="list">
   <li *ngFor="let x of developers">{{x}} </li>
 </ul>
-<app-box></app-box>
-<app-box></app-box>
-<app-box></app-box>
-<app-box></app-box>
-<app-box></app-box>
+<app-box *ngFor="let x of boxes;let y=index" 
+[title]="x"
+[item]="itemlist[y]"
+(listen)="receive(y,$event)"></app-box>
+
 </div>

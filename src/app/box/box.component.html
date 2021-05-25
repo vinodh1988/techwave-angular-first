@@ -1,3 +1,7 @@
 <div [ngClass]="theme" (click)="handle()">
-    Content
+    <h3>{{title}}</h3>
+    <hr>
+    <ul>
+        <li *ngFor="let x of things" (click)="clicked(x)">{{x}}</li>
+    </ul>
 </div>

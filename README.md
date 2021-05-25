@@ -167,3 +167,74 @@ import { BoxComponent } from './box/box.component';
   ],
 
   ```
+
+### Exchanging data between parent and child
+
+### @Input and @Output
+
+#### @Input
+
+This is used to send data from parent to child
+
+In the child class we need create an input element decorated with @Input
+
+example
+
+```
+@Component({
+  selector: 'app-box',
+  templateUrl: './box.component.html',
+  styleUrls: ['./box.component.css']
+})
+export class BoxComponent implements OnInit {
+@Input() title;
+  constructor() { }
+  ---
+  ---
+  --
+  ```
+
+and in the parent component html you can pass data like this
+
+```
+<app-box [title]="Data"></app-box>
+```
+
+here in the above code, the title input attribute is called in parent template
+
+#### @Output
+
+@Output is usually used to send data from child to parent
+@Output decorator is used to a variable of type EventEmitter
+
+In the child component, we create an output type in the following way
+
+```
+@Component({
+  selector: 'app-box',
+  templateUrl: './box.component.html',
+  styleUrls: ['./box.component.css']
+})
+export class BoxComponent implements OnInit {
+theme="blackbox"
+@Input() title:any;
+@Input('item') things:any; 
+@Output('listen') send:EventEmitter<string>=new EventEmitter<string>();
+---
+---
+
+```
+
+In the above code send is decorated with @Output and send is of type
+EventEmitter, it emits string data
+
+and Parent would subscribe to the listen event as mentioned in the @Output
+
+```
+
+<app-box [item]="x" [title]="y" (listen)="fun($event)">
+
+```
+
+In the above parent template , (listen) is the output directive subscribing
+to the event and the data emitted would be captured in $event variable
