@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ABC Company APP';
   developers = ["John","Harry","Larry","Mathew","Nancy"]
+  fcolor="#335EFF"
+  bgcolor="#33BEFF"
   handleclick(){
 
   }

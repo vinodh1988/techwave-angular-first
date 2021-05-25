@@ -133,3 +133,37 @@ example
 <button (click)="fun()">
 ```
 
+#### Input Output Directives
+
+  * Directive which can be used both as input and output
+  * Wrapped within [()]
+
+  Example
+
+  ```
+  <input type="text" [(ngModel)]="name">
+  ```
+
+for ngModel to work, you need to import FormsModule in app.module.ts as mentioned here
+
+```
+
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BoxComponent } from './box/box.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    BoxComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+
+  ```
