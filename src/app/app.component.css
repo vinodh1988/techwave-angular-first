@@ -2,3 +2,11 @@ h1{
     background-color: lightgreen;
     color: red;
 }
+
+.list{
+    padding: 30px;
+    background-color: lightseagreen;
+    color: darkslategray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}

@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'firstapp';
-
+  title = 'ABC Company APP';
+  developers = ["John","Harry","Larry","Mathew","Nancy"]
   handleclick(){
-    
+
   }
 }

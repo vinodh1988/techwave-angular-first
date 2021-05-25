@@ -1,5 +1,9 @@
-<h1> My First Angular Application </h1>
+<h1> {{title}} </h1>
 <hr>
+<h3>Programmers</h3>
+<ul class="list">
+  <li *ngFor="let x of developers">{{x}} </li>
+</ul>
 <app-box></app-box>
 <app-box></app-box>
 <app-box></app-box>

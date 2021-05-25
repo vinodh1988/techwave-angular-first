@@ -67,3 +67,69 @@ ng g c <name of the component>
 
 ex: ng g c box
 ```
+## Directives
+
+### Built-in directives
+
+Directives are classes that add additional behavior to elements in your Angular applications. With Angular's built-in directives, you can manage forms, lists, styles, and what users see.
+
+
+The different types of Angular directives are as follows:
+
+* `Components—directives` with a template. This type of directive is the most common directive type.
+
+* `Attribute directives` directives that change the appearance or behavior of an element, component, or another directive.
+
+* `Structural directives` directives that change the DOM layout by adding and removing DOM elements
+
+
+### Structural Directive
+
+  * structural directives generate template, hide template, remove template, unhide template
+  * all the structural directives are prefixed with asterisk (*)
+  * they can be appliced on any html element and user defined components
+
+  some inbuilt structural directives - ngFor,ngIf,ngSwitch
+
+  ex:
+
+  ```
+     <li *ngFor="let x of people">{{x}}</li>
+   
+   ```
+
+   ### Attribute Directives
+
+    Attribute Directives are further classified into
+    1. Input Directives
+    2. Output Directives
+    3. Input output Directives
+
+    #### Input Directive
+
+    * Input directive receives values
+    * it can be applied on both html elements and angular components
+    * it is enclosed with []
+    * it changes the appearance and behaviour of the the component usually
+
+some inbuilt input directives  ngClass, style,ngStyle
+
+  example:
+
+  ```
+     <h1 [ngClass]="style1"></h1>
+  ```
+
+  #### Output directives
+
+  * Output directives are event emitters
+  * they are wrapped within ()
+  * Generally they listen to events and call the function in the right when event occurs
+
+ some inbuilt directives: click, mouseover, keyup, change
+
+example
+```
+<button (click)="fun()">
+```
+
