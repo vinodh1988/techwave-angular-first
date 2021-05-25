@@ -105,7 +105,7 @@ The different types of Angular directives are as follows:
     2. Output Directives
     3. Input output Directives
 
-    #### Input Directive
+#### Input Directives
 
     * Input directive receives values
     * it can be applied on both html elements and angular components
