@@ -10,17 +10,8 @@
   5. Routing Configuration
  * Single page here is nothing but collection of Components
 
-## Component
 
-   Component is a UI Unit
-
-   It has its own 
- * Template [html]
- * Styling [css]
- * data
- * Events
-
- 
+ ## Angular App Folder Structure
 
   |WORKSPACE CONFIG FILES	|   PURPOSE                             |
   |-------------------------|---------------------------------------|
@@ -34,3 +25,45 @@
 |node_modules/	| Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.|
 | tsconfig.json |	The base TypeScript configuration for projects in the workspace. All other configuration files inherit from this base file. For more information, see the Configuration inheritance with extends section of the TypeScript documentation.|
 |tslint.json |	Default TSLint configuration for projects in the workspace.|
+
+
+## Component
+
+   Component is a UI Unit
+
+   It has its own 
+ * Template [html]
+ * Styling [css]
+ * data
+ * Events
+
+To create a component , we create a typescript class as follows
+
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'firstapp';
+}
+
+```
+
+in the above class,
+ 
+* @Component is a decorator
+* the propery selector represent the element that would be created as custom html tag after a component is built
+* templateUrl is used to specify the html associated with the component - only one
+* styleUrls is used to specify the css files associated with the component
+
+### To create a component by using CLI
+
+```
+ng g c <name of the component>
+
+ex: ng g c box
+```
